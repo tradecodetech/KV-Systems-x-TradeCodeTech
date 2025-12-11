@@ -1,314 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KV Systems — Web & Automation Agency</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KV Systems — Websites & Automation</title>
 
-<style>
-/* ---------------------------------------------------
-   BASE STYLE + DARK MODE SUPPORT
---------------------------------------------------- */
-:root {
-    --bg: #f5f5f7;
-    --text: #111;
-    --card-bg: #ffffff;
-    --card-border: #e5e5e5;
-    --accent: #000;
-}
-
-body.dark {
-    --bg: #0d0d0f;
-    --text: #f1f1f1;
-    --card-bg: #1a1a1d;
-    --card-border: #2c2c31;
-    --accent: #fff;
-}
-
-body {
-    margin: 0;
-    font-family: "Inter", Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* ---------------------------------------------------
-   HEADER
---------------------------------------------------- */
-header {
-    background: var(--card-bg);
-    border-bottom: 1px solid var(--card-border);
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 26px;
-    font-weight: 700;
-}
-
-.tradecodetech-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    background: var(--accent);
-    color: var(--bg);
-    padding: 6px 14px;
-    border-radius: 6px;
-    opacity: 0.9;
-}
-
-/* Simple placeholder icon */
-.tct-icon {
-    width: 12px;
-    height: 12px;
-    background: var(--bg);
-    border-radius: 3px;
-}
-
-/* ---------------------------------------------------
-   DARK MODE TOGGLE BUTTON
---------------------------------------------------- */
-.toggle-container {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 10px 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0px 6px 14px rgba(0,0,0,0.1);
-    transition: 0.2s;
-}
-
-.toggle-container:hover {
-    transform: translateY(-3px);
-}
-
-/* ---------------------------------------------------
-   HERO
---------------------------------------------------- */
-.hero {
-    padding: 120px 40px 80px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #777;
-}
-
-/* ---------------------------------------------------
-   ANIMATIONS
---------------------------------------------------- */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ---------------------------------------------------
-   SECTIONS
---------------------------------------------------- */
-.section {
-    padding: 80px 40px;
-}
-
-.section h2 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 50px;
-}
-
-/* ---------------------------------------------------
-   GRID CARDS
---------------------------------------------------- */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-}
-
-.card {
-    background: var(--card-bg);
-    border-radius: 14px;
-    padding: 28px;
-    border: 1px solid var(--card-border);
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.05);
-    transition: 0.25s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 14px 22px rgba(0,0,0,0.1);
-}
-
-/* ---------------------------------------------------
-   CTA
---------------------------------------------------- */
-.cta {
-    text-align: center;
-    padding: 80px 40px;
-    background: var(--text);
-    color: var(--bg);
-}
-
-.cta a {
-    padding: 14px 32px;
-    background: var(--bg);
-    color: var(--text);
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* ---------------------------------------------------
-   FOOTER
---------------------------------------------------- */
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 14px;
-    opacity: 0.6;
-}
-
-@media (max-width: 650px) {
-    .hero h1 {
-        font-size: 34px;
-    }
-}
-</style>
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
     <div class="logo">KV Systems</div>
-    <div class="tradecodetech-logo">
-        <div class="tct-icon"></div>
-        TradeCodeTech
-    </div>
+    <div class="tradecodetech-tag">TradeCodeTech</div>
 </header>
 
-<section class="hero fade-in">
-    <h1>Modern Websites + Automation That Scale Your Business</h1>
-    <p>KV Systems builds high-performance websites, automated backends, and AI-driven systems for small businesses, creators, and entrepreneurs.</p>
+<section class="hero fade">
+    <h1>Websites, Automation, and AI Systems That Scale Your Business</h1>
+    <p>Premium websites with integrated backend workflows, AI agents, client portals, and business infrastructure.</p>
 </section>
 
-<section class="section">
-    <h2 class="fade-in">What We Build</h2>
+<section class="section fade">
+    <h2>Core Infrastructure Features</h2>
 
     <div class="grid">
-
-        <div class="card fade-in">
-            <h3>Website Creation</h3>
-            <p>Clean, modern, high-converting websites built for growth.</p>
+        <div class="card feature-card">
+            <div class="icon"></div>
+            <h3>Automated Client Onboarding</h3>
+            <p>Convert visitors → scheduled clients with automated forms, reminders, and workflows.</p>
         </div>
 
-        <div class="card fade-in">
-            <h3>Backend Systems & Automations</h3>
-            <p>Remove manual tasks and replace them with precise automation.</p>
+        <div class="card feature-card">
+            <div class="icon"></div>
+            <h3>AI Lead Qualification</h3>
+            <p>Smart chat agents that capture leads, answer questions, and push into your CRM.</p>
         </div>
 
-        <div class="card fade-in">
-            <h3>AI Agents & Chatbots</h3>
-            <p>Lead capture, support bots, client onboarding, and intelligent workflows.</p>
+        <div class="card feature-card">
+            <div class="icon"></div>
+            <h3>Backend Automations</h3>
+            <p>Zapier integrations, CRM builds, email flows, and business logic executed automatically.</p>
         </div>
-
-        <div class="card fade-in">
-            <h3>Zapier Workflows</h3>
-            <p>Connect your business tools and automate your processes end-to-end.</p>
-        </div>
-
-        <div class="card fade-in">
-            <h3>Client Portals / Booking Systems</h3>
-            <p>Onboarding flows, member dashboards, scheduling, and secure access.</p>
-        </div>
-
-        <div class="card fade-in">
-            <h3>Funnel Builds</h3>
-            <p>Lead funnels, opt-ins, checkout systems, and conversion flows.</p>
-        </div>
-
-        <div class="card fade-in">
-            <h3>Trading Tools / Algo Builds</h3>
-            <p>Custom indicators, dashboards, and automation built for traders.</p>
-        </div>
-
-        <div class="card fade-in">
-            <h3>Content Systems</h3>
-            <p>Automation for creators needing consistency, templates, and workflow.</p>
-        </div>
-
-        <div class="card fade-in">
-            <h3>Reels Editing Add-On</h3>
-            <p>Fast, clean, trending video edits built for engagement.</p>
-        </div>
-
     </div>
 </section>
 
-<section class="cta fade-in">
-    <h2>Ready to upgrade your business?</h2>
-    <p>Book a consultation and let us build the infrastructure your brand deserves.</p>
-    <a href="mailto:info@kvacademy.org">Contact KV Systems</a>
+<section class="section fade">
+    <h2>Recent Work & System Builds</h2>
+
+    <div class="browser">
+        <div class="browser-top">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+        </div>
+        <div class="browser-content">Website Mockup 1</div>
+    </div>
+
+    <div class="browser">
+        <div class="browser-top">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+        </div>
+        <div class="browser-content">Website Mockup 2</div>
+    </div>
+
+    <div class="grid">
+        <div class="card">Automation Workflow Preview</div>
+        <div class="card">AI + Chatbot UI Preview</div>
+        <div class="card">KVFX / Technical Tools Preview</div>
+    </div>
+</section>
+
+<section class="section fade">
+    <h2>Service Suites</h2>
+
+    <div class="offer-grid">
+        <div class="offer-card">
+            <h3>Website Essentials Suite</h3>
+            <p>Modern website build</p>
+            <p>Mobile responsive</p>
+            <p>Basic automations</p>
+            <p><strong>Custom Quote</strong></p>
+        </div>
+
+        <div class="offer-card">
+            <h3>Business Automation Build</h3>
+            <p>Full website system</p>
+            <p>CRM + scheduling + onboarding</p>
+            <p>AI assistant integration</p>
+            <p><strong>Custom Quote</strong></p>
+        </div>
+
+        <div class="offer-card">
+            <h3>Complete Infrastructure System</h3>
+            <p>Full backend automation</p>
+            <p>Funnels, dashboards, workflows</p>
+            <p>Advanced system logic</p>
+            <p><strong>Custom Quote</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="cta fade">
+    <h2>Ready to build your system?</h2>
+    <a href="mailto:info@kvacademy.org">Book Your Build</a>
 </section>
 
 <footer>
-    © 2025 KV Systems — TradeCodeTech Division. All rights reserved.
+    © 2025 KV Systems × TradeCodeTech
 </footer>
 
-<!-- ---------------------------------------------------
-     DARK MODE TOGGLE + SCROLL ANIMATION SCRIPT
---------------------------------------------------- -->
-<script>
-// Dark mode toggle
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.createElement("div");
-    toggle.className = "toggle-container";
-    toggle.innerText = "Toggle Dark Mode";
-    document.body.appendChild(toggle);
-
-    toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-    });
-
-    // Scroll animation observer
-    const items = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, { threshold: 0.2 });
-
-    items.forEach(item => observer.observe(item));
-});
-</script>
+<!-- Link external JS -->
+<script src="script.js"></script>
 
 </body>
 </html>

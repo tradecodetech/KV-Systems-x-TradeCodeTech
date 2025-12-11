@@ -1,0 +1,229 @@
+/* -----------------------------------------
+   GOLD THEME VARIABLES
+----------------------------------------- */
+:root {
+    --bg: #f5f5f7;
+    --text: #111;
+    --card-bg: #fff;
+    --card-border: #e5e5e5;
+    --gold: #d4af37;
+}
+
+body.dark {
+    --bg: #0d0d0f;
+    --text: #f1f1f1;
+    --card-bg: #1a1a1d;
+    --card-border: #2c2c31;
+}
+
+/* -----------------------------------------
+   GLOBAL
+----------------------------------------- */
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", Arial, sans-serif;
+    transition: 0.25s ease;
+}
+
+/* -----------------------------------------
+   HEADER
+----------------------------------------- */
+header {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--card-border);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.tradecodetech-tag {
+    background: var(--gold);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* -----------------------------------------
+   HERO
+----------------------------------------- */
+.hero {
+    padding: 120px 40px 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.hero p {
+    opacity: 0.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* -----------------------------------------
+   SECTIONS
+----------------------------------------- */
+.section {
+    padding: 70px 40px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--gold);
+}
+
+/* -----------------------------------------
+   GRID + CARDS
+----------------------------------------- */
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 24px;
+    border-radius: 14px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* -----------------------------------------
+   MINIMAL CSS ICON
+----------------------------------------- */
+.icon {
+    width: 34px;
+    height: 34px;
+    border: 3px solid var(--gold);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* -----------------------------------------
+   PORTFOLIO MOCK BROWSER
+----------------------------------------- */
+.browser {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.browser-top {
+    background: #ddd;
+    padding: 10px 14px;
+    display: flex;
+    gap: 8px;
+}
+
+.browser-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.browser-content {
+    height: 240px;
+    background: #cfcfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----------------------------------------
+   OFFERS / PRICING
+----------------------------------------- */
+.offer-grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.offer-card {
+    border: 2px solid var(--gold);
+    background: var(--card-bg);
+    padding: 28px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.offer-card h3 {
+    color: var(--gold);
+    font-size: 22px;
+}
+
+/* -----------------------------------------
+   CTA
+----------------------------------------- */
+.cta {
+    background: var(--gold);
+    color: #000;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.cta a {
+    background: #000;
+    color: var(--gold);
+    padding: 14px 34px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* -----------------------------------------
+   FOOTER
+----------------------------------------- */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+
+/* -----------------------------------------
+   FADE-IN ANIMATION CLASS
+----------------------------------------- */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease-out;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -----------------------------------------
+   DARK MODE BUTTON
+----------------------------------------- */
+.toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    padding: 10px 16px;
+    border: 1px solid var(--card-border);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
