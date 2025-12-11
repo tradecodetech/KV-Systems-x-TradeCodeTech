@@ -192,7 +192,7 @@ header {
 }
 
 /* -----------------------------------------
-   BROWSER MOCKUP + SCREENSHOT
+   BROWSER MOCKUP + UNIFORM SCREENSHOTS
 ----------------------------------------- */
 .browser {
     background: var(--card-bg);
@@ -223,18 +223,16 @@ header {
     border-radius: 50%;
 }
 
-/* NEW — screenshot wrapper */
-.screenshot-box {
+/* FORCE ALL TEMPLATE IMAGES TO SAME HEIGHT */
+.browser-content {
     height: 240px;
     overflow: hidden;
     padding: 0 !important;
 }
 
-/* NEW — actual screenshot */
-.screenshot-box img,
 .preview-img {
     width: 100%;
-    height: 100%;
+    height: 240px;
     object-fit: cover;
     display: block;
 }
