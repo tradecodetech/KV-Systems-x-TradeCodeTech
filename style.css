@@ -2,83 +2,146 @@
    CORPORATE BLUE THEME VARIABLES
 ----------------------------------------- */
 :root {
-    --bg: #f5f5f7;
-    --text: #111;
-    --card-bg: #fff;
-    --card-border: #e5e5e5;
+    --bg: #f5f7fa;
+    --text: #1a1a1a;
 
-    /* Corporate Blue Palette */
     --blue-primary: #1D4ED8;
     --blue-secondary: #3B82F6;
     --blue-dark: #1E40AF;
+
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+
+    --nav-bg: #1D4ED8;
+    --nav-text: #ffffff;
+
+    --transition: 0.25s ease;
 }
 
 body.dark {
-    --bg: #0d0d0f;
+    --bg: #0c0d11;
     --text: #f1f1f1;
-    --card-bg: #1a1a1d;
-    --card-border: #2c2c31;
+
+    --card-bg: #1b1c22;
+    --card-border: #2a2d34;
+
+    --nav-bg: #111827;
+    --nav-text: #ffffff;
 }
 
 /* -----------------------------------------
-   GLOBAL
+   GLOBAL RESET
 ----------------------------------------- */
 body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
     font-family: "Inter", Arial, sans-serif;
-    transition: 0.25s ease;
+    transition: var(--transition);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 /* -----------------------------------------
-   HEADER
+   NAVBAR (DESKTOP + MOBILE)
 ----------------------------------------- */
 header {
-    background: var(--card-bg);
-    border-bottom: 1px solid var(--card-border);
-    padding: 18px 40px;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 14px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
-.logo {
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-img {
+    height: 34px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-color: var(--nav-text);
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: none;
     font-size: 26px;
-    font-weight: 900;
+    cursor: pointer;
 }
 
-.tradecodetech-tag {
-    background: var(--blue-primary);
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 13px;
+/* -----------------------------------------
+   MOBILE NAV MENU
+----------------------------------------- */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--nav-bg);
+    padding: 20px;
+    gap: 20px;
+}
+
+.mobile-nav a {
+    font-size: 18px;
     font-weight: 600;
 }
 
 /* -----------------------------------------
-   HERO
+   HERO SECTION
 ----------------------------------------- */
 .hero {
-    padding: 120px 40px 80px;
+    padding: 140px 40px 100px;
     text-align: center;
+    background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+    color: #fff;
 }
 
 .hero h1 {
     font-size: 48px;
     font-weight: 900;
-    color: var(--blue-dark);
+    line-height: 1.1;
+    margin-bottom: 16px;
 }
 
 .hero p {
-    opacity: 0.8;
-    max-width: 700px;
+    max-width: 720px;
     margin: auto;
+    opacity: 0.9;
+    font-size: 18px;
 }
 
 /* -----------------------------------------
-   SECTIONS
+   SECTION WRAPPER
 ----------------------------------------- */
 .section {
     padding: 70px 40px;
@@ -86,58 +149,69 @@ header {
 
 .section h2 {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
     color: var(--blue-primary);
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 50px;
 }
 
 /* -----------------------------------------
-   GRID + CARDS
+   GRID SYSTEM
 ----------------------------------------- */
 .grid {
     display: grid;
     gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* -----------------------------------------
+   CARDS
+----------------------------------------- */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    padding: 24px;
     border-radius: 14px;
-    transition: 0.25s ease;
+    padding: 24px;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.10);
 }
 
 /* -----------------------------------------
-   MINIMAL CSS ICON
+   ICONS
 ----------------------------------------- */
 .icon {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border: 3px solid var(--blue-primary);
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* -----------------------------------------
-   PORTFOLIO MOCK BROWSER WINDOWS
+   PORTFOLIO MOCK BROWSERS
 ----------------------------------------- */
 .browser {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 14px;
-    margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.browser:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
 .browser-top {
-    background: #dfe3ea;
+    background: #d8dce6;
     padding: 10px 14px;
     display: flex;
     gap: 8px;
@@ -152,37 +226,35 @@ header {
 
 .browser-content {
     height: 240px;
-    background: #cdd6e7;
+    padding: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* -----------------------------------------
-   OFFER / PRICING SECTION
------------------------------------------ */
-.offer-grid {
-    display: grid;
-    gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* Placeholder lines */
+.preview-title {
+    width: 60%;
+    height: 22px;
+    background: var(--blue-primary);
+    opacity: 0.4;
+    border-radius: 6px;
 }
 
-.offer-card {
-    border: 2px solid var(--blue-primary);
-    background: var(--card-bg);
-    padding: 28px;
-    border-radius: 16px;
-    text-align: center;
+.preview-line {
+    height: 10px;
+    background: #cfd4df;
+    border-radius: 4px;
 }
 
-.offer-card h3 {
-    color: var(--blue-primary);
-    font-size: 22px;
-    margin-bottom: 10px;
-}
+.preview-line.short { width: 30%; }
+.preview-line.medium { width: 50%; }
 
-.offer-card p {
-    opacity: 0.85;
+.preview-button {
+    width: 140px;
+    height: 32px;
+    background: var(--blue-primary);
+    border-radius: 6px;
 }
 
 /* -----------------------------------------
@@ -195,13 +267,15 @@ header {
     text-align: center;
 }
 
-.cta a {
+.cta-btn {
     background: #fff;
     color: var(--blue-primary);
     padding: 14px 34px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
 }
 
 /* -----------------------------------------
@@ -214,7 +288,7 @@ footer {
 }
 
 /* -----------------------------------------
-   FADE-IN ANIMATION
+   ANIMATIONS
 ----------------------------------------- */
 .fade {
     opacity: 0;
@@ -228,16 +302,36 @@ footer {
 }
 
 /* -----------------------------------------
-   DARK MODE BUTTON
+   DARK MODE TOGGLE
 ----------------------------------------- */
 .toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: var(--card-bg);
+    color: var(--text);
     padding: 10px 16px;
-    border: 1px solid var(--card-border);
     border-radius: 30px;
     cursor: pointer;
+    border: 1px solid var(--card-border);
     font-weight: 600;
+    z-index: 100;
+}
+
+/* -----------------------------------------
+   RESPONSIVE NAV
+----------------------------------------- */
+@media (max-width: 820px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
 }
